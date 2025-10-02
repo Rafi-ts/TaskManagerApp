@@ -1,97 +1,82 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+📘 Task Manager App (React Native)
 
-# Getting Started
+A simple Task Manager App built with React Native to demonstrate advanced state management using:
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+🟢 Zustand – for managing tasks (CRUD + persistence)
 
-## Step 1: Start Metro
+🟣 MobX – for theme switching (Light/Dark mode)
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+💾 AsyncStorage – for local persistence
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+🚀 Features
 
-```sh
-# Using npm
-npm start
+✅ Add new tasks
+✅ Mark tasks as complete / undo
+✅ Delete tasks
+✅ Light/Dark theme toggle
+✅ Persistent storage (data remains after app reload)
 
-# OR using Yarn
-yarn start
-```
+🛠 Tech Stack
 
-## Step 2: Build and run your app
+React Native
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+Zustand
 
-### Android
+MobX
 
-```sh
-# Using npm
-npm run android
+AsyncStorage
 
-# OR using Yarn
-yarn android
-```
+📂 Project Structure
+src/
+│── store/
+│   ├── useTaskStore.js     # Zustand store for tasks
+│   ├── themeStore.js       # MobX store for theme
+│── components/
+│   ├── TaskInput.js        # Input box to add new tasks
+│   ├── TaskItem.js         # Task item UI with toggle/delete
+│── screens/
+│   └── HomeScreen.js       # Main screen
+│── App.js
 
-### iOS
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+⚡ Installation & Setup
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+Clone the repo:
 
-```sh
-bundle install
-```
+git clone https://github.com/yourusername/task-manager-rn.git
+cd task-manager-rn
 
-Then, and every time you update your native dependencies, run:
 
-```sh
-bundle exec pod install
-```
+Install dependencies:
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+npm install
+# or yarn install
 
-```sh
-# Using npm
-npm run ios
 
-# OR using Yarn
-yarn ios
-```
+Run on Android:
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+npx react-native run-android
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
 
-## Step 3: Modify your app
+Run on iOS (Mac only):
 
-Now that you have successfully run the app, let's make changes!
+npx pod-install
+npx react-native run-ios
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+📚 Learning Goals
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+Learn Zustand for lightweight state management.
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+Learn MobX for reactive state & theme management.
 
-## Congratulations! :tada:
+Implement persistence with AsyncStorage.
 
-You've successfully run and modified your React Native App. :partying_face:
+Practice clean code & GitHub documentation.
 
-### Now what?
+🎯 Future Improvements
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+Add task categories (Work, Personal, Shopping).
 
-# Troubleshooting
+Add due dates & reminders.
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Improve UI with animations.
